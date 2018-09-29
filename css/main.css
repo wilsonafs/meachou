@@ -1,12 +1,10 @@
-@media only screen and (min-width: 320px) {
-    .sd-header {
-        background: #758387;
-    }
+.bg-home {
+    background: #fff url(../images/bg-header.png) no-repeat top center;
 }
 
-@media only screen and (min-width: 1170px) {
-    .sd-header {
-        background: rgba(17, 45, 53, 0.6);
+@media only screen and (min-width: 1170px){
+    .bg-home {
+        background-size: 100%;
     }
 }
 
@@ -20,6 +18,26 @@
     -webkit-transition: all .15s ease 0s;
     transition: all .15s ease 0s;
     position: fixed;
+}
+
+@media only screen and (min-width: 320px) {
+    .sd-header {
+        background: #1a5a6b;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .sd-header {
+        background: rgba(17, 45, 53, 0.6);
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 @media (min-width: 576px) {
@@ -46,22 +64,21 @@
     }
 }
 
-.container {
-    width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-}
-
 .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 @media only screen and (min-width: 320px) {
     .sd-header #b {
         position: absolute;
         right: 5%;
-        top: 30%;
+        top: 30px;
         width: 30px;
         height: 30px;
         display: block;
@@ -84,6 +101,20 @@
     }
 }
 
+.sd-header .logo {
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: 100%;
+}
+
+.sd-img-replace {
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
 @media only screen and (min-width: 320px) {
     .sd-header .logo {
         width: 119px;
@@ -94,28 +125,16 @@
 
 @media only screen and (min-width: 1170px) {
     .sd-header .logo {
-        width: 150px;
+        width: 160px;
         height: 53px;
+        margin-top: 3px;
     }
 }
 
-.sd-header .logo {
-    background-image: url(../images/logo.png);
-    background-repeat: no-repeat;
-    display: inline-block;
-    background-size: 100%;
-}
-
-.sd-img-replace {
-    display: inline;
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
-}
-
-a {
-    color: #555;
-    text-decoration: none;
+@media (min-width: 768px) {
+    .ml-md-auto, .mx-md-auto {
+        margin-left: auto!important;
+    }
 }
 
 @media only screen and (min-width: 320px) {
@@ -128,17 +147,11 @@ a {
 
 @media only screen and (min-width: 1170px) {
     .sd-header .menu {
-        display: block;
         float: right;
         margin-top: 1em;
         padding: 0;
+        display: block;
         width: auto;
-    }
-}
-
-@media (min-width: 768px) {
-    .ml-md-auto, .mx-md-auto {
-        margin-left: auto !important;
     }
 }
 
@@ -153,39 +166,42 @@ a {
     .sd-header .menu li a {
         display: block;
         color: #fff;
-    }
-}
-
-@media only screen and (min-width: 1170px) {
-    .sd-header .menu li a:hover, .sd-header .menu li a.active {
-        border-bottom: 1px solid #2799cd;
+        font-family: "titillium_weblight",sans-serif;
+        letter-spacing: 0.188em;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-size: 1rem;
+        text-decoration: none;
+        text-align: center;
+        padding-bottom: 1.563em;
     }
 }
 
 @media only screen and (min-width: 1170px) {
     .sd-header .menu li a {
-    color: #fff;
-    font-family: "titillium_weblight",sans-serif;
-    letter-spacing: 0.188em;
-    text-transform: uppercase;
-    font-size: 9px;
-    font-size: .5625rem;
-    text-decoration: none;
-    line-height: 30px;
-    display: block;
-    border-bottom: 1px solid transparent;
-    padding-bottom: 0;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+        color: #fff;
+        font-family: "titillium_weblight",sans-serif;
+        letter-spacing: 0.188em;
+        text-transform: uppercase;
+        font-size: 9px;
+        font-size: .5625rem;
+        text-decoration: none;
+        line-height: 30px;
+        display: block;
+        border-bottom: 1px solid transparent;
+        padding-bottom: 0;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 }
 
-.bg-home {
-    background: #fff url(../images/bg-header.png) no-repeat top center;
-    background-size: 100%;
+@media only screen and (min-width: 1170px) {
+    .sd-header .menu li a:hover, .sd-header .menu li a.active {
+        border-bottom: 1px solid #469acb;
+    }
 }
 
 .no-touch #sd-vertical-nav {
@@ -255,18 +271,70 @@ a {
     display: none;
 }
 
-#section1 .box-txt .bt-default {
-    display: block;
-    max-width: 338px;
-    margin: 2rem auto;
+.no-touch #sd-vertical-nav a span {
+    float: right;
+    display: inline-block;
+}
+
+#section1 .box-txt .sd-title {
+    font-weight: 900;
+    color: #fff;
+}
+
+.sd-title {
+    font-size: 31px;
+    font-size: 1.9375rem;
+    position: relative;
+    line-height: 1.2;
+    margin-bottom: 1.875rem;
+}
+
+@media only screen and (min-width: 320px) {
+    #section1 .box-txt .sd-title {
+        font-size: 32px;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #section1 .box-txt .sd-title {
+        font-size: 62px;
+        font-size: 2.0rem;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 320px) {
+    #section1 .box-txt {
+        position: inherit;
+        right: auto;
+        top: 70%;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    #section1 .box-txt {
+        position: absolute;
+        right: 30px;
+        top: 190px;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .head-cont {
+        right: 0;
+        position: absolute;
+    }
 }
 
 .bt-default {
     display: inline-block;
-    border-radius: 15px;
+    border-radius: 30px;
     background-color: #2799cd;
     border: 0;
     color: #fff;
+    line-height: 1.4;
     padding: .75rem 1rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -287,31 +355,27 @@ a {
     }
 }
 
-@media only screen and (min-width: 1170px) {
-    .head-cont {
-        right: 0;
-        position: absolute;
-        top: 40%;
-    }
+.sd-section {
+    position: relative;
+    padding: 32em 0 0;
+}
+
+#section3 {
+    background-color: #f5f5f5;
 }
 
 @media only screen and (min-width: 320px) {
-    #section1 .box-txt .sd-title {
-        font-size: 1.3rem;
-        text-align: center;
+    #section3 {
+        height: auto;
+        background-size: cover;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    #section1 .box-txt .sd-title {
-        font-size: 2.5rem;
-        text-align: left;
+    #section3 {
+        height: 728px;
+        background-size: initial;
     }
-}
-
-#section1 .box-txt .sd-title {
-    font-weight: 900;
-    color: #fff;
 }
 
 .sd-title {
@@ -322,6 +386,4 @@ a {
     margin-bottom: 1.875rem;
 }
 
-#section1 {
-    height: auto;
-}
+
