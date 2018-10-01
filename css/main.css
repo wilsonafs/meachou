@@ -445,3 +445,15 @@
         line-height: 58px;
     }
 }
+
+.title-high {
+    text-align: center;
+    color: #fff;
+}
+
+#section4 {
+    height: 500px;
+    background-color: #8e8e8e;
+    padding: 55px 0;
+    text-align: center;
+}
