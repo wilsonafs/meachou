@@ -408,11 +408,40 @@
 }
 
 @media only screen and (min-width: 1170px) {
-    #heading_line {
+    .heading_line {
         height: 2px;
         width: 20%;
         clear: left;
         float: left;
         background-color: #2799cd;
+    }
+}
+
+#section2 {
+    height: 172px;
+    background-color: #2799cd;
+    line-height: 55px;
+    padding: 55px 0;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    #section2 {
+        text-align: left;
+    }
+}
+
+.bt-high {
+    background-color: #fff;
+    color: #2799cd;
+}
+
+.text-high {
+    line-height: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .text-high {
+        line-height: 58px;
     }
 }
